@@ -1,0 +1,73 @@
+.section {
+  padding: 0 0 96px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.cardLink {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  transition: border-color 200ms;
+}
+
+.cardLink:hover .card {
+  border-color: hsl(var(--primary));
+}
+
+.cardBody {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+.title {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: hsl(var(--foreground));
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 0.9375rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.65;
+  flex: 1;
+}
+
+.arrow {
+  font-size: 1.25rem;
+  color: hsl(var(--primary));
+  margin-top: 8px;
+  transition: transform 200ms ease;
+}
+
+.cardLink:hover .arrow {
+  transform: translateX(4px);
+}

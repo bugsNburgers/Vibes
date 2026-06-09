@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
-/* ============================================
-   DESIGN TOKENS — adapted from devloggs
-   Dark mode only. No .light override needed.
-   ============================================ */
 :root {
   --background:            250 20% 6%;
   --foreground:            220 20% 92%;
@@ -90,7 +86,7 @@ img {
 }
 
 /* ============================================
-   UTILITY CLASSES (devloggs pattern)
+   UTILITY CLASSES
    ============================================ */
 .font-mono { font-family: 'Space Mono', monospace; }
 
@@ -116,7 +112,7 @@ img {
   background: linear-gradient(180deg, transparent 60%, hsl(var(--accent) / 0.35) 60%);
 }
 
-/* Phase label (devloggs pattern) */
+/* Phase label */
 .phase-label {
   display: inline-flex;
   align-items: center;
