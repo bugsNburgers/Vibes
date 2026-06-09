@@ -1,0 +1,133 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  background: hsl(var(--card) / 0.95);
+  border-bottom: 3px solid hsl(var(--border));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 24px;
+}
+
+.logo {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 1.375rem;
+  text-transform: lowercase;
+  letter-spacing: 0.15em;
+  color: hsl(var(--foreground));
+  flex-shrink: 0;
+}
+
+.dot {
+  color: hsl(var(--accent));
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .desktopNav { display: none; }
+}
+
+.navLink {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+  transition: color 200ms;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  transition: width 200ms ease;
+}
+
+.navLink:hover { color: hsl(var(--foreground)); }
+.navLink:hover::after { width: 100%; }
+.navLinkActive { color: hsl(var(--foreground)); }
+.navLinkActive::after { width: 100%; }
+
+.portfolioLink {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  letter-spacing: 0.05em;
+  transition: color 200ms;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.portfolioLink:hover { color: hsl(var(--accent)); }
+
+@media (max-width: 768px) {
+  .portfolioLink { display: none; }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+}
+
+.bar {
+  display: block;
+  width: 22px; height: 2px;
+  background: hsl(var(--foreground));
+  border-radius: 2px;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.barTopOpen { transform: translateY(7px) rotate(45deg); }
+.barMidOpen { opacity: 0; }
+.barBotOpen { transform: translateY(-7px) rotate(-45deg); }
+
+.mobileMenu {
+  border-top: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.mobileMenu .navLink {
+  font-size: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.mobilePortfolio {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  letter-spacing: 0.05em;
+}
