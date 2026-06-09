@@ -1,0 +1,41 @@
+.wrapper { display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; }
+.center { align-items: center; text-align: center; }
+
+.phaseRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phaseLine {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.phaseText {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+.title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: lowercase;
+  line-height: 1.15;
+  color: hsl(var(--foreground));
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 540px;
+  line-height: 1.7;
+}

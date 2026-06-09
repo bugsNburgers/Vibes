@@ -1,0 +1,53 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  border-radius: 2px;
+  border: 2px solid;
+  box-shadow: var(--shadow-brutal-sm);
+  white-space: nowrap;
+}
+
+.icon { display: inline-flex; align-items: center; }
+
+.default {
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+.primary {
+  background: hsl(var(--primary) / 0.15);
+  color: hsl(var(--primary));
+  border-color: hsl(var(--primary) / 0.4);
+}
+
+.accent {
+  background: hsl(var(--accent) / 0.15);
+  color: hsl(var(--accent));
+  border-color: hsl(var(--accent) / 0.4);
+}
+
+.anime {
+  background: hsl(var(--anime-accent) / 0.12);
+  color: hsl(var(--anime-accent));
+  border-color: hsl(var(--anime-accent) / 0.35);
+}
+
+.music {
+  background: hsl(var(--music-accent) / 0.12);
+  color: hsl(var(--music-accent));
+  border-color: hsl(var(--music-accent) / 0.35);
+}
+
+.pets {
+  background: hsl(var(--pets-accent) / 0.12);
+  color: hsl(var(--pets-accent));
+  border-color: hsl(var(--pets-accent) / 0.35);
+}
