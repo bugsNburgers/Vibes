@@ -1,0 +1,81 @@
+.btn {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid hsl(var(--border));
+  box-shadow: var(--shadow-brutal);
+  border-radius: var(--radius);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.secondary {
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.accent {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  border-color: hsl(var(--accent));
+}
+
+.outline {
+  background: transparent;
+  color: hsl(var(--foreground));
+}
+
+.ghost {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: hsl(var(--muted-foreground));
+}
+.ghost:hover:not(:disabled) {
+  color: hsl(var(--foreground));
+  box-shadow: none;
+  transform: none;
+}
+
+/* Sizes */
+.sm { padding: 8px 16px; font-size: 0.8125rem; }
+.md { padding: 12px 24px; font-size: 0.9375rem; }
+.lg { padding: 16px 32px; font-size: 1.0625rem; }
+
+/* Spinner */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
