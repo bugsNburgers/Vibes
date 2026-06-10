@@ -48,7 +48,7 @@ async function getAccessToken(): Promise<string> {
     throw new Error(`Spotify token refresh failed: ${res.status}`);
   }
 
-  const data: SpotifyTokenResponse = await res.json();
+  const data = (await res.json()) as SpotifyTokenResponse;
   cachedToken = data.access_token;
   tokenExpiresAt = Date.now() + data.expires_in * 1000;
   return cachedToken;
@@ -68,7 +68,7 @@ export async function getTopTracks(): Promise<Track[]> {
     throw new Error(`Spotify top tracks failed: ${res.status}`);
   }
 
-  const data = await res.json();
+  const data = (await res.json()) as { items?: SpotifyTrack[] };
   const items: SpotifyTrack[] = data.items ?? [];
 
   return items.map((item) => ({
