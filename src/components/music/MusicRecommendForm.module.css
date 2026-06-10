@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.success {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--pets-accent));
+}
+
+.rateLimited {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--accent));
+}
+
+.error {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--destructive));
+}
