@@ -1,0 +1,18 @@
+.page {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.intro {
+  font-size: 1.0625rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 600px;
+  line-height: 1.75;
+  margin-bottom: 48px;
+}
+
+.divider {
+  height: 1px;
+  background: hsl(var(--border));
+  margin: 72px 0;
+}
