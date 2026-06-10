@@ -1,0 +1,124 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  background: hsl(var(--input));
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 12px 40px 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+  transition: border-color 200ms, box-shadow 200ms;
+}
+
+.input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
+}
+
+.input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.spinner {
+  position: absolute;
+  right: 14px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid hsl(var(--muted-foreground));
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+.throttleMsg {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: hsl(var(--accent));
+  padding: 6px 0 0;
+  text-align: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+  box-shadow: var(--shadow-brutal-lg);
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 100;
+  border-radius: var(--radius);
+}
+
+.resultItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid hsl(var(--border));
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.resultItem:last-child {
+  border-bottom: none;
+}
+
+.resultItem:hover {
+  background: hsl(var(--secondary));
+}
+
+.thumb {
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 56px;
+}
+
+.resultInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.resultTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultJp {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.resultMeta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 2px;
+}
