@@ -1,0 +1,219 @@
+.container {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lockRow {
+  display: flex;
+  align-items: center;
+}
+
+.lockBtn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  background: none;
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 6px 14px;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: color 150ms, border-color 150ms;
+  box-shadow: var(--shadow-brutal-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lockBtn:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--primary));
+}
+
+/* Unlock form */
+.unlockForm {
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-brutal);
+  max-width: 400px;
+}
+
+.unlockActions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Admin panel */
+.adminPanel {
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--primary) / 0.4);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-brutal);
+}
+
+.adminHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adminBadge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+  border: 1px solid hsl(var(--primary) / 0.3);
+  border-radius: 2px;
+  padding: 4px 10px;
+}
+
+.searchRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.searchLabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Selected preview */
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.selectedPreview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: hsl(var(--secondary));
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 12px;
+  position: relative;
+}
+
+.previewThumb {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.previewTitle {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+}
+
+.previewMeta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 2px;
+}
+
+.clearBtn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 4px;
+  flex-shrink: 0;
+  transition: color 150ms;
+}
+
+.clearBtn:hover { color: hsl(var(--destructive)); }
+
+/* Genre editor */
+.genreEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.genreTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  background: hsl(var(--input));
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  min-height: 44px;
+}
+
+.genreTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: hsl(var(--anime-accent) / 0.15);
+  color: hsl(var(--anime-accent));
+  border: 1px solid hsl(var(--anime-accent) / 0.4);
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.genreTag button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.625rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.genreTag button:hover { opacity: 1; }
+
+.genreInput {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  min-width: 100px;
+}
+
+.genreInput::placeholder { color: hsl(var(--muted-foreground)); }
+
+/* Status messages */
+.success {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--pets-accent));
+}
+
+.error {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--destructive));
+}
