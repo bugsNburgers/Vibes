@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:backend": "npm --prefix vibes-backend run dev",
     "build": "next build",
+    "build:backend": "npm --prefix vibes-backend run build",
     "start": "next start",
-    "lint": "next lint"
+    "start:backend": "npm --prefix vibes-backend run start",
+    "lint": "next lint",
+    "db:push": "npm --prefix vibes-backend run db:push",
+    "seed:pets": "npm --prefix vibes-backend run seed:pets"
   },
   "dependencies": {
     "next": "14.2.29",
