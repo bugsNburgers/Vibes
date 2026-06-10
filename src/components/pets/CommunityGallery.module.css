@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.endMessage {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+.empty {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+  padding: 48px 0;
+}
